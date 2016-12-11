@@ -98,12 +98,20 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show_my_view()
+    public function contact()
     {
-    
         //
-    return view('contact');    
+    // $people = ['Jason', 'Jose', 'John','Maria'];
+    $people = [];
+    return view('contact',compact('people'));    
         
+    }
+    public function show_post($id)
+    {
+        //
+    // return view('post')->with('id',$id);    
+    return view('post', compact('id'));    
+            
     }
 
     
